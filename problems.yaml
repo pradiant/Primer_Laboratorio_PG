@@ -1,0 +1,105 @@
+- title: Invertir una cadena de texto
+  prompt: Crea una función llamada `invertir_cadena(texto)` que reciba un string y
+    retorne el texto en orden inverso sin utilizar la función reversed().
+  hints:
+  - Puedes usar slicing con paso negativo [::-1].
+  - También puedes iterar sobre el string hacia atrás o concatenar en un acumulador.
+  tags:
+  - strings
+  - slicing
+  - basico
+- title: Verificación de palíndromos
+  prompt: Escribe una función llamada `es_palindromo(palabra)` que determine si una
+    palabra o frase es un palíndromo (se lee igual al derecho que al revés), ignorando
+    espacios y mayúsculas.
+  hints:
+  - Normaliza el texto usando .lower() y eliminando espacios con .replace(' ', '').
+  - Compara la cadena resultante consigo misma invertida.
+  tags:
+  - strings
+  - logica
+  - algoritmos
+- title: Factorial recursivo con validación
+  prompt: Diseña una función `factorial(n)` que calcule el factorial de un entero
+    no negativo de manera recursiva. Si n es negativo, debe lanzar un ValueError.
+  hints:
+  - El caso base es cuando n es 0 o 1, cuyo factorial es 1.
+  - Para casos recursivos, retorna n * factorial(n - 1).
+  tags:
+  - recursion
+  - matematicas
+  - excepciones
+- title: Contador de frecuencia de palabras
+  prompt: Implementa `contar_palabras(texto)` que reciba un texto y retorne un diccionario
+    con la frecuencia de aparición de cada palabra en minúsculas.
+  hints:
+  - Divide el texto en palabras con .split().
+  - Puedes utilizar un diccionario normal o la clase Counter del módulo collections.
+  tags:
+  - diccionarios
+  - strings
+  - colecciones
+- title: Filtro de números primos en un rango
+  prompt: Desarrolla una función `filtrar_primos(inicio, fin)` que devuelva una lista
+    con todos los números primos comprendidos entre inicio y fin (ambos inclusive).
+  hints:
+  - Un número primo es mayor que 1 y solo es divisible por 1 y por sí mismo.
+  - Para comprobar primalidad, basta con verificar divisores hasta la raíz cuadrada
+    del número.
+  tags:
+  - algoritmos
+  - matematicas
+  - listas
+- title: Aplanar una lista anidada
+  prompt: Escribe una función `aplanar_lista(lista_anidada)` que reciba una lista
+    con múltiples niveles de anidación arbitrarios y retorne una lista simple y plana
+    con todos los elementos.
+  hints:
+  - Itera por cada elemento comprobando con isinstance(elemento, list).
+  - Usa recursión para sublistas o una estructura de pila (stack).
+  tags:
+  - recursion
+  - listas
+  - estructuras-datos
+- title: Decorador de tiempo de ejecución
+  prompt: Implementa un decorador `@medir_tiempo` que imprima por consola el tiempo
+    que tarda en ejecutarse la función decorada usando el módulo time.
+  hints:
+  - Define una función wrapper(*args, **kwargs) interna.
+  - Usa time.perf_counter() antes y después de llamar a la función original y functools.wraps.
+  tags:
+  - decoradores
+  - funciones-avanzadas
+  - performance
+- title: Generador de serie Fibonacci
+  prompt: Crea una función generadora `generar_fibonacci(limite)` que utilice yield
+    para producir los primeros limite números de la sucesión de Fibonacci comenzando
+    desde 0 y 1.
+  hints:
+  - Mantén dos variables de estado a, b = 0, 1 y actualízalas con a, b = b, a + b.
+  - Emplea la palabra clave yield para entregar cada valor de manera perezosa (lazy).
+  tags:
+  - generadores
+  - iteradores
+  - fibonacci
+- title: Agrupación de elementos por longitud
+  prompt: Diseña una función `agrupar_por_longitud(palabras)` que reciba una lista
+    de palabras y retorne un diccionario donde las claves sean las longitudes enteras
+    y los valores listas de palabras correspondientes.
+  hints:
+  - Puedes inicializar un diccionario o usar collections.defaultdict(list).
+  - Recorre las palabras calculando len(p) y agregándolas a la lista de dicha clave.
+  tags:
+  - diccionarios
+  - agrupacion
+  - estructuras-datos
+- title: Validador de paréntesis balanceados
+  prompt: Construye una función `parentesis_balanceados(expresion)` que verifique
+    si los delimitadores (), [] y {} se encuentran debidamente balanceados y anidados.
+  hints:
+  - Utiliza una pila (lista como stack) para almacenar delimitadores de apertura.
+  - Al encontrar uno de cierre, desapila y verifica si coincide con su pareja correspondiente.
+  tags:
+  - pilas
+  - algoritmos
+  - validacion
