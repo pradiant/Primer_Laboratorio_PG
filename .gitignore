@@ -1,0 +1,7 @@
+.venv
+cambios.md
+planificacion.md
+problems.yaml
+.gitignore
+__pycache__
+.DS_Store

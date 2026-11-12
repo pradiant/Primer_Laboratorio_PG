@@ -1,0 +1,60 @@
+=== RETO ===
+TITULO: Transformación de colecciones con map y lambda
+CONSIGNA: Escribe una función pura `convertir_temperaturas(celsius_list)` que reciba una lista de temperaturas en grados Celsius y retorne una nueva lista con los equivalentes en Fahrenheit usando map() y una función lambda.
+PISTAS: La fórmula de conversión es (C * 9/5) + 32. | Recuerda envolver el resultado de map() en list() para materializar la lista.
+TAGS: funcional, map, lambda, transformacion
+
+=== RETO ===
+TITULO: Filtrado declarativo con filter
+CONSIGNA: Diseña una función pura `filtrar_palabras_largas(palabras, longitud_minima)` que utilice filter() y una expresión lambda para devolver una nueva lista únicamente con las palabras cuya longitud sea estrictamente mayor a longitud_minima.
+PISTAS: Utiliza la función len(p) dentro del predicado lambda. | La función no debe modificar la lista original.
+TAGS: funcional, filter, lambda, listas
+
+=== RETO ===
+TITULO: Reducción acumulativa con reduce
+CONSIGNA: Implementa una función `producto_total(numeros)` que calcule el producto de todos los elementos de una lista de enteros utilizando functools.reduce() y una función lambda, sin usar bucles for ni while.
+PISTAS: Importa reduce desde el módulo functools. | El acumulador en la lambda multiplica el acumulado por el elemento actual: lambda acc, x: acc * x.
+TAGS: funcional, reduce, acumulacion, matematicas
+
+=== RETO ===
+TITULO: Generador de multiplicadores con closures
+CONSIGNA: Crea una función de orden superior `crear_multiplicador(factor)` que retorne una nueva función (clausura/closure). La función retornada debe recibir un número `n` y devolver el resultado de multiplicar `n * factor`.
+PISTAS: Define una función interna `multiplicar(n)` dentro de `crear_multiplicador` y devuélvela sin invocarla. | La función interna retiene el valor de `factor` en su entorno léxico.
+TAGS: funcional, closures, orden-superior
+
+=== RETO ===
+TITULO: Currificación básica de tres argumentos
+CONSIGNA: Escribe una función `curry_suma(a)` que implemente currificación para sumar tres números mediante llamadas sucesivas: `curry_suma(a)(b)(c) == a + b + c`.
+PISTAS: Cada función retornada debe tomar exactamente un argumento. | Utiliza funciones anidadas o expresiones lambda encadenadas: lambda b: lambda c: a + b + c.
+TAGS: funcional, currying, orden-superior, lambdas
+
+=== RETO ===
+TITULO: Composición de funciones puras
+CONSIGNA: Diseña una función de orden superior `componer(f, g)` que tome dos funciones de un solo argumento y retorne una nueva función equivalente a aplicar f(g(x)).
+PISTAS: Retorna una función lambda o interna que reciba x y devuelva f(g(x)). | Esta operación modela matemáticamente la composición funcional (f ∘ g).
+TAGS: funcional, composicion, orden-superior
+
+=== RETO ===
+TITULO: Memoización funcional con decorador
+CONSIGNA: Implementa un decorador puramente funcional `@memoizar` que almacene en caché los resultados de funciones puras basándose en sus argumentos mediante un diccionario interno.
+PISTAS: Utiliza un diccionario de caché dentro del closure de la función decoradora. | Emplea args como clave del diccionario para buscar o guardar el resultado.
+TAGS: funcional, memoizacion, decoradores, closures
+
+=== RETO ===
+TITULO: Partición inmutable de secuencias
+CONSIGNA: Desarrolla una función pura `particionar(predicado, iterable)` que retorne una tupla con dos listas `(cumplen, no_cumplen)` sin mutar el iterable original.
+PISTAS: Puedes emplear dos list comprehensions con `if predicado(x)` e `if not predicado(x)` o una función recursiva. | El resultado debe ser inmutable a nivel de contenedor principal (tupla).
+TAGS: funcional, particionado, inmutabilidad, predicados
+
+=== RETO ===
+TITULO: Generación perezosa infinita de números pares
+CONSIGNA: Escribe una función generadora pura `generar_pares_infinitos()` que produzca de forma perezosa (lazy evaluation) los números pares a partir del 0 indefinidamente con yield.
+PISTAS: Utiliza un bucle infinito `while True` con `yield actual` y avance de dos en dos. | No almacenes todos los números en memoria, solo entrega uno en cada llamada con next().
+TAGS: funcional, generadores, lazy-evaluation, iteradores
+
+=== RETO ===
+TITULO: Transposición inmutable de matrices con zip
+CONSIGNA: Construye una función pura `transponer_matriz(matriz)` que reciba una lista de listas (matriz) y retorne una nueva lista de tuplas que represente la matriz transpuesta utilizando zip() y el operador de desempaquetado *.
+PISTAS: La expresión `list(zip(*matriz))` desempaqueta las filas y agrupa las columnas automáticamente. | La función es pura y no altera la matriz de entrada.
+TAGS: funcional, zip, matrices, inmutabilidad
+
